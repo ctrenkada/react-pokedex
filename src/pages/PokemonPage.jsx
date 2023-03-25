@@ -30,13 +30,7 @@ export const PokemonPage = () => {
                     <div className="header-main-pokemon">
                         <span className="number-pokemon">#{pokemon.id}</span>
                         <div className="container-img-pokemon">
-                            <img
-                                src={
-                                    pokemon.sprites.other.dream_world
-                                        .front_default
-                                }
-                                alt={`Pokemon ${pokemon?.name}`}
-                            />
+                            <img src={pokemon.sprites.other["official-artwork"].front_default} alt={`Pokemon ${pokemon?.name}`} />
                         </div>
 
                         <div className="container-info-pokemon">
@@ -47,14 +41,14 @@ export const PokemonPage = () => {
                                         key={type.type.name}
                                         className={`${type.type.name}`}
                                     >
-                                        {type.type.name}
+                                        {primerMayuscula(type.type.name)}
                                     </span>
                                 ))}
                             </div>
                             <div className="info-pokemon">
                                 <div className="group-info">
                                     <p>Altura</p>
-                                    <span>{pokemon.height}</span>
+                                    <span>{pokemon.height * 10 / 200}m</span>
                                 </div>
                                 <div className="group-info">
                                     <p>Peso</p>
@@ -68,47 +62,54 @@ export const PokemonPage = () => {
                         <h1>Estadísticas</h1>
                         <div className="stats">
                             <div className="stat-group">
-                                <span>Hp</span>
-                                <div className="progress-bar"></div>
+                                <span>HP</span>
+                                <progress className="progress-bar" value={pokemon.stats[0].base_stat} max="200"></progress>
                                 <span className="counter-stat">
                                     {pokemon.stats[0].base_stat}
                                 </span>
                             </div>
                             <div className="stat-group">
-                                <span>Attack</span>
-                                <div className="progress-bar"></div>
+                                <span>Ataque</span>
+                                <progress className="progress-bar" value={pokemon.stats[1].base_stat} max="200"></progress>
                                 <span className="counter-stat">
                                     {pokemon.stats[1].base_stat}
                                 </span>
                             </div>
                             <div className="stat-group">
-                                <span>Defense</span>
-                                <div className="progress-bar"></div>
+                                <span>Defensa</span>
+                                <progress className="progress-bar" value={pokemon.stats[2].base_stat} max="200"></progress>
                                 <span className="counter-stat">
                                     {pokemon.stats[2].base_stat}
                                 </span>
                             </div>
                             <div className="stat-group">
-                                <span>Special Attack</span>
-                                <div className="progress-bar"></div>
+                                <span>Ataque especial</span>
+                                <progress className="progress-bar" value={pokemon.stats[3].base_stat} max="200"></progress>
                                 <span className="counter-stat">
                                     {pokemon.stats[3].base_stat}
                                 </span>
                             </div>
                             <div className="stat-group">
-                                <span>Special Defense</span>
-                                <div className="progress-bar"></div>
+                                <span>Defensa especial</span>
+                                <progress className="progress-bar" value={pokemon.stats[4].base_stat} max="200"></progress>
                                 <span className="counter-stat">
                                     {pokemon.stats[4].base_stat}
                                 </span>
                             </div>
                             <div className="stat-group">
-                                <span>Speed</span>
-                                <div className="progress-bar"></div>
+                                <span>Velocidad</span>
+                                <progress className="progress-bar" value={pokemon.stats[5].base_stat} max="200"></progress>
                                 <span className="counter-stat">
                                     {pokemon.stats[5].base_stat}
                                 </span>
                             </div>
+
+                        </div>
+                    </div>
+                    <div className="container-shiny">
+                        <h1>Shiny</h1>
+                        <div className="container-img-pokemon">
+                            <img src={pokemon.sprites.other["official-artwork"].front_shiny} alt={`hola`} />
                         </div>
                     </div>
                 </>

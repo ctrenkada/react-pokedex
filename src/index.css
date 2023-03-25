@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
 
 :root {
 	--color-fire: #ff7402;
@@ -33,15 +33,17 @@
 }
 
 body {
-	font-family: 'Montserrat';
+	font-family: "Montserrat";
 }
+
 /* Globales */
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
-/* Header */
+/* header */
+
 header {
 	display: flex;
 	align-items: center;
@@ -72,7 +74,6 @@ header form {
 }
 
 .form-group input {
-	/* padding: 15px 30px; */
 	font-family: inherit;
 	width: 300px;
 	border: none;
@@ -90,13 +91,12 @@ header form {
 	border: none;
 	outline: none;
 	border-radius: 25px;
-	padding: 15px 30px;
 	font-family: inherit;
-	color: #fff;
-	background-color: var(--color-primary);
+	padding: 15px 30px;
 	cursor: pointer;
-	font-weight: 500;
 	letter-spacing: 2px;
+	background-color: var(--color-primary);
+	color: #fff;
 }
 
 .btn-search:hover {
@@ -147,8 +147,7 @@ header form {
 }
 
 .card-img img {
-	width: 100%;
-	height: 100%;
+	width: 80%;
 }
 
 .card-info {
@@ -304,8 +303,6 @@ Styles of Pokemon Single Page
 .main-pokemon {
 	display: flex;
 	flex-direction: column;
-
-	margin-top: 100px;
 	margin-bottom: 50px;
 }
 
@@ -320,10 +317,10 @@ Styles of Pokemon Single Page
 
 .number-pokemon {
 	position: absolute;
-	top: -130px;
+	top: -70px;
 	left: 0;
 
-	font-size: 200px;
+	font-size: 300px;
 	font-weight: 700;
 	color: var(--color-primary-hover);
 }
@@ -332,25 +329,23 @@ Styles of Pokemon Single Page
 	order: 2;
 	flex: 1;
 	padding: 25px 25px 25px 0;
-	height: 400px;
 }
 
 .container-img-pokemon img {
-	height: 100%;
-	width: 100%;
+	width: 80%;
 }
 
 .container-info-pokemon {
 	display: flex;
 	flex-direction: column;
-
 	order: 1;
 	flex: 1;
+	margin-top: 8em;
 }
 
 .container-info-pokemon h1 {
 	text-align: right;
-	font-size: 60px;
+	font-size: 50px;
 }
 
 .info-pokemon {
@@ -360,15 +355,8 @@ Styles of Pokemon Single Page
 	margin-top: 20px;
 }
 
-.group-info{
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
-
 .group-info p {
 	font-weight: 700;
-	font-size: 20px;
 }
 
 /* Stats */
@@ -398,25 +386,43 @@ Styles of Pokemon Single Page
 }
 
 .progress-bar {
-	width: 100%;
-	height: 30px;
-	background-color: var(--color-primary);
+	border-radius: 20px;
+	width: 80%;
+	height: 25px;
+}
+
+.progress-bar::-webkit-progress-bar {
+	background-color: rgb(219, 219, 219);
 	border-radius: 10px;
 }
-/* Search Page */
 
-.p-search{
+.progress-bar::-webkit-progress-value {
+	background-color: #006d77;
+	border-radius: 10px;
+}
+
+.p-search {
 	margin-bottom: 30px;
 	font-size: 22px;
 }
 
-.p-search span{
+.p-search span {
 	font-weight: 700;
+}
+
+.container-shiny {
+	width: 100%;
+	text-align: center;
+	margin-top: 3em;
+}
+
+.container-shiny img {
+	width: 40%;
 }
 
 /* Loader */
 
-.container-loader{
+.container-loader {
 	display: flex;
 	justify-content: center;
 	margin: 200px 0;
@@ -424,7 +430,7 @@ Styles of Pokemon Single Page
 
 /* Btn Load More */
 
-.container-btn-load-more{
+.container-btn-load-more {
 	display: flex;
 	justify-content: center;
 
@@ -432,7 +438,7 @@ Styles of Pokemon Single Page
 	margin-top: 20px;
 }
 
-.btn-load-more{
+.btn-load-more {
 	border: none;
 	padding: 15px 40px;
 	font-family: inherit;
@@ -442,7 +448,7 @@ Styles of Pokemon Single Page
 	cursor: pointer;
 }
 
-.btn-load-more:hover{
+.btn-load-more:hover {
 	background-color: var(--color-primary-hover);
 	color: #000;
 }
