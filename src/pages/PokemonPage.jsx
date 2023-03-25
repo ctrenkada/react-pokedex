@@ -28,7 +28,13 @@ export const PokemonPage = () => {
             ) : (
                 <>
                     <div className="header-main-pokemon">
-                        <span className="number-pokemon">#{pokemon.id}</span>
+                        {
+                            pokemon.id < 100 ? (
+                                <span className="number-pokemon">#{pokemon.id}</span>
+                            ) : (
+                                <span className="number-pokemon" style={{ fontSize: "200px" }}>#{pokemon.id}</span>
+                            )
+                        }
                         <div className="container-img-pokemon">
                             <img src={pokemon.sprites.other["official-artwork"].front_default} alt={`Pokemon ${pokemon?.name}`} />
                         </div>
@@ -57,9 +63,11 @@ export const PokemonPage = () => {
                             </div>
                         </div>
                     </div>
-
+                    <br/>
                     <div className="container-stats">
-                        <h1>Estadísticas</h1>
+                        <div className="stats-title">
+                            <h1>Estadísticas</h1>
+                        </div>
                         <div className="stats">
                             <div className="stat-group">
                                 <span>HP</span>
@@ -106,10 +114,11 @@ export const PokemonPage = () => {
 
                         </div>
                     </div>
+                    <br/>
                     <div className="container-shiny">
                         <h1>Shiny</h1>
-                        <div className="container-img-pokemon">
-                            <img src={pokemon.sprites.other["official-artwork"].front_shiny} alt={`hola`} />
+                        <div className="container-img-pokemon-shiny">
+                            <img src={pokemon.sprites.other["official-artwork"].front_shiny} alt={`hola`}/>
                         </div>
                     </div>
                 </>
