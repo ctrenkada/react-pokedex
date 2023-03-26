@@ -45,14 +45,12 @@ body {
 /* header */
 
 header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 40px 0;
+	text-align: center;
+	padding: 20px 0;
 }
 
 .logo img {
-	width: 150px;
+	width: 250px;
 }
 
 header form {
@@ -65,7 +63,6 @@ header form {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-
 	border: 1px solid #555;
 	padding: 15px 20px;
 	border-radius: 25px;
@@ -81,7 +78,6 @@ header form {
 
 .icon-search {
 	width: 20px;
-	height: 20px;
 	stroke: #555;
 }
 
@@ -127,7 +123,6 @@ header form {
 
 .icon-filter .icon {
 	width: 30px;
-	height: 30px;
 	stroke: #555;
 }
 
@@ -139,6 +134,16 @@ header form {
 	cursor: pointer;
 }
 
+.input-i-boton {
+	display: flex;
+	margin-bottom: 20px;
+	column-gap: 15px;
+	margin-right: 1px;
+}
+
+.input-i-boton button{
+	display: none;
+}
 
 /* Card List Pokemon */
 .card-list-pokemon {
@@ -497,36 +502,40 @@ Styles of Pokemon Single Page
 	}
 
 	/* Homepage */
-
-	.logo-container {
-		display: flex;
-		justify-content: center;
-		width: 100%;
-		position: absolute;
-		margin-top: 1em;
-	}
-
-	.input-i-boton {
-		display: none;
-	}
-
-	header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding:30px 0px 35px 0px;
-	}
-
 	.form-group {
 		display: flex;
 		justify-content: center;
-		width: 50%;
+		width: 43.5%;
+		align-items: center;
+		border-style: none none solid none;
+		padding: 10px 10px 5px 20px;
+		border-radius: 0px;
 	}
 
-	.icon-buscar {
-		display: none;
-		width: 1em;
-		stroke: #555;
+	.icon-search {
+		width: 20px;
+		margin-left: -12.5em;
+		margin-top: 0.2em;
+		position: absolute;
+	}
+
+	.form-group input {
+		font-size: 12px;
+	}
+
+	.input-i-boton {
+		display: flex;
+    	justify-content: center;
+		margin-right: -5.1em;
+	}
+
+	header {
+		text-align: center;
+		padding: 20px 0;
+	}
+	
+	.logo img {
+		width: 160px;
 	}
 
 	.card-list-pokemon {
@@ -539,13 +548,13 @@ Styles of Pokemon Single Page
 		width: 100%;
 	}
 
-	.icon-buscar {
-		display: flex;
-		align-items: center;
-		gap: 15px;
-		cursor: pointer;
-		width: 25px;
-		margin-right: 5px;
+	.icon-filter .icon{
+		width: 35px;
+
+	}
+
+	.icon-filter span{
+		display: none;
 	}
 
 	/* Filter sidebar */
