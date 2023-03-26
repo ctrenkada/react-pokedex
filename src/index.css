@@ -339,10 +339,13 @@ Styles of Pokemon Single Page
 	position: absolute;
 	top: -70px;
 	left: 0;
-
 	font-size: 300px;
 	font-weight: 700;
 	color: var(--color-primary-hover);
+}
+
+.number-pokemon.gt100 {
+	font-size: 200px;
 }
 
 .container-img-pokemon {
@@ -578,17 +581,86 @@ Styles of Pokemon Single Page
 	}
 
 	/* Pokemon page */
-	.container-info-pokemon {
+
+	.header-main-pokemon {
 		display: flex;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
 		align-items: center;
-		height: 50vh;
-		align-content: center;
+		position: relative;
 		flex-direction: column;
 	}
 
+	.container-info-pokemon {
+		display: flex;
+		flex-direction: column;
+		margin-top: 0;
+	}
 
+	.container-number-pokemon {
+		display: flex;
+		order: 2;
+		width: 100%;
+		line-height: 15px;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
 
+	.number-pokemon {
+		position: relative;
+		font-size: 25px;
+		top: 0;
+		left: 0;
+		font-weight: 700;
+		color: var(--color-primary-hover);
+	}
+
+	.number-pokemon.gt100 {
+		font-size: 25px;
+	}
+
+	.container-img-pokemon {
+		display: flex;
+		justify-content: center;
+		order: 2;
+		padding: 15px 0px 15px 0;
+	}
+
+	.container-stats {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.stats-title {
+		text-align: center;
+		width: 100%;
+	}
+
+	.stats {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 85%;
+		margin: 1em 10px 1em 10px;
+		flex: 1;
+		justify-content: center;
+	}
+
+	.stat-group span {
+		flex: 42%;
+	}
+
+	.stat-group .counter-stat {
+		flex: 0%;
+	}
+
+	.container-shiny img {
+		width: 80%;
+	}
+
+	.container-shiny {
+		margin-top: 1em;
+	}
 
 }

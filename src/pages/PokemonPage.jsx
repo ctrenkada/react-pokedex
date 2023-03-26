@@ -28,13 +28,15 @@ export const PokemonPage = () => {
             ) : (
                 <>
                     <div className="header-main-pokemon">
-                        {
-                            pokemon.id < 100 ? (
-                                <span className="number-pokemon">#{pokemon.id}</span>
-                            ) : (
-                                <span className="number-pokemon" style={{ fontSize: "200px" }}>#{pokemon.id}</span>
-                            )
-                        }
+                        <div className="container-number-pokemon">
+                            {
+                                pokemon.id < 100 ? (
+                                    <span className="number-pokemon">#{pokemon.id}</span>
+                                ) : (
+                                    <span className="number-pokemon gt100">#{pokemon.id}</span>
+                                )
+                            }
+                        </div>
                         <div className="container-img-pokemon">
                             <img src={pokemon.sprites.other["official-artwork"].front_default} alt={`Pokemon ${pokemon?.name}`} />
                         </div>
@@ -62,7 +64,7 @@ export const PokemonPage = () => {
                             </div>
                         </div>
                     </div>
-                    <br/>
+                    <br />
                     <div className="container-stats">
                         <div className="stats-title">
                             <h1>Estadísticas</h1>
@@ -113,11 +115,11 @@ export const PokemonPage = () => {
 
                         </div>
                     </div>
-                    <br/>
+                    <br />
                     <div className="container-shiny">
                         <h1>Shiny</h1>
                         <div className="container-img-pokemon-shiny">
-                            <img src={pokemon.sprites.other["official-artwork"].front_shiny} alt={`hola`}/>
+                            <img src={pokemon.sprites.other["official-artwork"].front_shiny} alt={`hola`} />
                         </div>
                     </div>
                 </>
