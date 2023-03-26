@@ -48,7 +48,6 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
 	padding: 40px 0;
 }
 
@@ -59,7 +58,6 @@ header {
 header form {
 	display: flex;
 	align-items: center;
-
 	gap: 15px;
 }
 
@@ -107,22 +105,40 @@ header form {
 /* Btn Filter */
 .container-filter {
 	display: flex;
+	justify-content: space-between;
 }
 
 .icon-filter {
 	display: flex;
 	align-items: center;
 	gap: 15px;
-
 	margin-bottom: 20px;
 	cursor: pointer;
 }
+
+.icon-buscar {
+	display: none;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
 
 .icon-filter .icon {
 	width: 30px;
 	height: 30px;
 	stroke: #555;
 }
+
+.close-filter {
+	width: 35px;
+	fill: #555;
+	margin: -8em 0em 0em 11em;
+	position: absolute;
+	cursor: pointer;
+}
+
 
 /* Card List Pokemon */
 .card-list-pokemon {
@@ -387,6 +403,7 @@ Styles of Pokemon Single Page
 	text-align: center;
 	width: 35%;
 }
+
 .stat-group {
 	display: flex;
 	align-items: center;
@@ -449,7 +466,6 @@ Styles of Pokemon Single Page
 .container-btn-load-more {
 	display: flex;
 	justify-content: center;
-
 	margin-bottom: 20px;
 	margin-top: 20px;
 }
@@ -467,4 +483,79 @@ Styles of Pokemon Single Page
 .btn-load-more:hover {
 	background-color: var(--color-primary-hover);
 	color: #000;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 600px) {
+	body {
+		max-width: 100%;
+	}
+
+	.container {
+		max-width: 100%;
+		overflow: hidden
+	}
+
+	/* Homepage */
+
+	.logo-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		position: absolute;
+		margin-top: 1em;
+	}
+
+	.input-i-boton {
+		display: none;
+	}
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding:30px 0px 35px 0px;
+	}
+
+	.form-group {
+		display: flex;
+		justify-content: center;
+		width: 50%;
+	}
+
+	.icon-buscar {
+		display: none;
+		width: 1em;
+		stroke: #555;
+	}
+
+	.card-list-pokemon {
+		display: grid;
+		margin: 0px 5px 0px 5px;
+		grid-template-columns: repeat(2, 47%);
+	}
+
+	.card-img img {
+		width: 100%;
+	}
+
+	.icon-buscar {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		cursor: pointer;
+		width: 25px;
+		margin-right: 5px;
+	}
+
+	/* Filter sidebar */
+	.filter-by-type {
+		margin-top: -4em;
+	}
+
+	/* Pokemon page */
+
+
+
+
 }
