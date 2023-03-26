@@ -6,8 +6,9 @@ import {CardPokemon} from '../components/CardPokemon';
 export const SearchPage = () => {
     const location = useLocation();
     const { globalPokemons } = useContext(PokemonContext);
-    const filteredPokemons = globalPokemons.filter(pokemon => pokemon.name.includes(location.state.toLowerCase()))
-    console.log('filteredPokemons', filteredPokemons);
+    let filteredPokemons;
+    if(location.state == undefined) filteredPokemons = globalPokemons;
+    else filteredPokemons = globalPokemons.filter(pokemon => pokemon.name.includes(location.state.toLowerCase()))
 
     return (
         <div className="container">

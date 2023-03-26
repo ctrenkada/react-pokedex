@@ -38,7 +38,6 @@ export const PokemonPage = () => {
                         <div className="container-img-pokemon">
                             <img src={pokemon.sprites.other["official-artwork"].front_default} alt={`Pokemon ${pokemon?.name}`} />
                         </div>
-
                         <div className="container-info-pokemon">
                             <h1>{primerMayuscula(pokemon.name)}</h1>
                             <div className="card-types info-pokemon-type">
