@@ -8,7 +8,7 @@ export const Loader = () => {
                 size={70}
                 lineWeight={5}
                 speed={5}
-                color="black"
+                color="#006d77"
             />
         </div>
     )
