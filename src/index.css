@@ -185,7 +185,7 @@ header form {
 }
 
 .card-info {
-	padding: 15px;
+	padding: 10px 15px 15px 5px;
 }
 
 .card-info h3 {
@@ -195,7 +195,7 @@ header form {
 .pokemon-id {
 	display: block;
 	color: #888;
-	margin-bottom: 15px;
+	margin-bottom: 8px;
 }
 
 .card-types {

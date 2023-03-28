@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useForm } from '../hook/useForm';
 import { PokemonContext } from './PokemonContext';
 import axios from 'axios';
 
@@ -7,11 +6,6 @@ export const PokemonProvider = ({ children }) => {
 	const [allPokemons, setAllPokemons] = useState([]);
 	const [globalPokemons, setGlobalPokemons] = useState([]);
 	const [offset, setOffset] = useState(0);
-
-	// Utilizar CustomHook - useForm
-	const { valueSearch, onInputChange, onResetForm } = useForm({
-		valueSearch: '',
-	});
 
 	// Estados para la aplicación simples
 	const [loading, setLoading] = useState(true);
@@ -122,20 +116,14 @@ export const PokemonProvider = ({ children }) => {
 	return (
 		<PokemonContext.Provider
 			value={{
-				valueSearch,
-				onInputChange,
-				onResetForm,
 				allPokemons,
 				globalPokemons,
 				getPokemonByID,
 				onClickLoadMore,
-				// Loader
 				loading,
 				setLoading,
-				// Btn Filter
 				active,
 				setActive,
-				// Filter Container Checkbox
 				handleCheckbox,
 				filteredPokemons,
 			}}
