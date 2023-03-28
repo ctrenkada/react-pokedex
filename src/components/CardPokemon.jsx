@@ -1,14 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { primerMayuscula } from "../helper/helper";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const CardPokemon = ({ pokemon }) => {
     return (
         <Link to={`/pokemon/${pokemon.id}`} className="card-pokemon">
             <div className="card-img">
-                <img
+                <LazyLoadImage
                     src={pokemon.sprites.other["official-artwork"].front_default}
                     alt={`Pokemon ${pokemon.name}`}
+                    effect="blur"
                 />
             </div>
             <div className="card-info">
